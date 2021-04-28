@@ -6,11 +6,12 @@ import './assets/css/reset.css'
 import Index from './pages/Index'
 import NotFound from './pages/NotFound'
 import AddMusic from './pages/AddMusic'
+import Routes from './route'
 
 function App() {
   return (
     <>
-      <AddMusic />
+      <Routes />
     </>
   );
 }
