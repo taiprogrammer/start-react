@@ -1,7 +1,7 @@
-import React from 'react';
 import editIcon from '../assets/images/edit-icon.png'
 import deleteIcon from '../assets/images/delete-icon.png'
 import starIcon from '../assets/images/star-solid.png'
+
 
 function MusicItem(props){
     return(
