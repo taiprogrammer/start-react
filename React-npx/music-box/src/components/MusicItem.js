@@ -1,17 +1,29 @@
 import editIcon from '../assets/images/edit-icon.png'
 import deleteIcon from '../assets/images/delete-icon.png'
 import starIcon from '../assets/images/star-solid.png'
+import imagemCapaPadrao from '../assets/images/capa.png'
+import api from '../api'
 
 
 function MusicItem(props){
+  function deletar() {
+    api.delete(`/${props.id}`).then(resposta => {
+      console.log("Deletado")
+      window.location.reload();
+    })
+  }
+  const estiloCapaMusica = {
+    backgroundImage: `url(${props.imgMusica === "" ? imagemCapaPadrao : props.imgMusica})`
+
+  }
     return(
         <>
         <div className="music-box">
-            <div className="img-music"></div>
+            <div className="img-music" style={estiloCapaMusica}></div>
             <div className="music-data">
               <div className="icons">
                 <img src={editIcon} alt="" className="edit" />
-                <img src={deleteIcon} alt="" className="delete" />
+                <img src={deleteIcon} alt="" className="delete" onClick={deletar}/>
                 <img src={starIcon} alt="" className="stars" />
               </div>
               <div className="name">

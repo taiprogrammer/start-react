@@ -124,7 +124,6 @@ nav {
 
 .img-music {
     background-color: var(--light-color-2);
-    background-image: url(../images/capa.png);
     background-size: cover;
     height: 290px;
 }
